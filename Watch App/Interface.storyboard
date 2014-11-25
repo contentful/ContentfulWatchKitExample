@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A388a" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitExample_Watch_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" layout="vertical" id="vQ5-iQ-fjP">
+                            <items>
+                                <tableRow identifier="NewsTableRowController" id="BwI-Ii-zru" customClass="NewsTableRowController" customModule="WatchKitExample_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="FEM-db-17G">
+                                        <items>
+                                            <label width="1" height="39" alignment="left" text="Label" id="C4l-dr-mTa">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="interfaceLabel" destination="C4l-dr-mTa" id="S7c-B0-KAT"/>
+                                        <segue destination="xx0-Jp-mAK" kind="push" id="hu9-WA-SD4"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="newsTable" destination="vQ5-iQ-fjP" id="1xA-b0-pfn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-3" y="138"/>
+        </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="FMp-9s-cir">
+            <objects>
+                <controller id="xx0-Jp-mAK" customClass="DetailInterfaceController" customModule="WatchKitExample_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="110" alignment="left" layout="vertical" hasDetent="YES" id="Rug-ZP-jOT">
+                            <items>
+                                <label width="1" alignment="left" text="IPA" id="Xec-nv-3NH"/>
+                                <label width="1" alignment="left" text="★★★★☆" id="82q-cG-1eH"/>
+                                <label width="1" alignment="left" id="LL0-ij-lPq"/>
+                                <label width="1" alignment="left" id="aSW-x9-wG7"/>
+                                <label width="1" alignment="left" id="Wxt-Dd-LoL"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" hasDetent="YES" id="2Rp-O2-d2d">
+                            <items>
+                                <button width="65" alignment="left" title="Home" id="gcP-9R-Diy">
+                                    <connections>
+                                        <action selector="homeTapped" destination="xx0-Jp-mAK" id="L2g-sm-ePh"/>
+                                    </connections>
+                                </button>
+                                <button width="65" alignment="left" title="Next" id="Z9r-4x-vSQ">
+                                    <connections>
+                                        <segue destination="acP-jj-BsS" kind="push" id="KSb-M5-w0o"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="227" y="137.25"/>
+        </scene>
+        <!--Image Interface Controller-->
+        <scene sceneID="zQE-Ms-OgO">
+            <objects>
+                <controller id="acP-jj-BsS" userLabel="Image Interface Controller" customClass="ImageInterfaceController" customModule="WatchKitExample_WatchKit_Extension">
+                    <items>
+                        <imageView width="1" height="110" alignment="left" image="hopfenreich_bar" id="Guz-dO-ISz"/>
+                        <group width="1" alignment="left" verticalAlignment="bottom" hasDetent="YES" id="Rnd-Kh-McW">
+                            <items>
+                                <button width="65" alignment="left" title="Home" id="EyO-yc-wwE">
+                                    <connections>
+                                        <action selector="homeTapped" destination="acP-jj-BsS" id="SWB-bQ-Myu"/>
+                                    </connections>
+                                </button>
+                                <button width="65" alignment="left" title="Next" id="TWJ-p2-kDD">
+                                    <connections>
+                                        <segue destination="40D-kr-Uum" kind="push" id="2D0-99-LFi"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="450" y="138"/>
+        </scene>
+        <!--Map Interface Controller-->
+        <scene sceneID="aEn-0Z-o4O">
+            <objects>
+                <controller id="40D-kr-Uum" userLabel="Map Interface Controller" customClass="MapInterfaceController" customModule="WatchKitExample_WatchKit_Extension">
+                    <items>
+                        <map width="1" height="109" alignment="left" id="yPt-Ry-xMb"/>
+                        <button width="1" alignment="left" title="Home" id="wc3-gW-Pv6">
+                            <connections>
+                                <action selector="homeTapped" destination="40D-kr-Uum" id="g0b-g8-t12"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="mapView" destination="yPt-Ry-xMb" id="q4I-Iq-ySO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="450" y="426"/>
+        </scene>
+    </scenes>
+</document>
