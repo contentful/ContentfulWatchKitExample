@@ -10,4 +10,5 @@ import WatchKit
 
 class NewsTableRowController: NSObject {
     @IBOutlet weak var interfaceLabel: WKInterfaceLabel!
+    @IBOutlet weak var interfaceImage: WKInterfaceImage!
 }

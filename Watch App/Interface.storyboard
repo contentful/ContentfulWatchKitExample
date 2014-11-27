@@ -13,7 +13,7 @@
                         <table alignment="left" layout="vertical" id="vQ5-iQ-fjP">
                             <items>
                                 <tableRow identifier="NewsTableRowController" id="BwI-Ii-zru" customClass="NewsTableRowController" customModule="WatchKitExample_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="FEM-db-17G">
+                                    <group key="rootItem" width="1" height="40" alignment="left" id="FEM-db-17G">
                                         <items>
                                             <label width="1" height="39" alignment="left" text="Label" id="C4l-dr-mTa">
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
@@ -40,13 +40,15 @@
             <objects>
                 <controller id="xx0-Jp-mAK" customClass="DetailInterfaceController" customModule="WatchKitExample_WatchKit_Extension">
                     <items>
-                        <group width="1" height="110" alignment="left" layout="vertical" hasDetent="YES" id="Rug-ZP-jOT">
+                        <group width="1" height="200" alignment="left" layout="vertical" hasDetent="YES" id="Rug-ZP-jOT">
                             <items>
-                                <label width="1" alignment="left" text="IPA" id="Xec-nv-3NH"/>
-                                <label width="1" alignment="left" text="★★★★☆" id="82q-cG-1eH"/>
-                                <label width="1" alignment="left" id="LL0-ij-lPq"/>
-                                <label width="1" alignment="left" id="aSW-x9-wG7"/>
-                                <label width="1" alignment="left" id="Wxt-Dd-LoL"/>
+                                <label width="1" alignment="left" text="Bar" textAlignment="center" id="U54-xB-M8q">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <label width="1" alignment="left" numberOfLines="0" id="Xec-nv-3NH">
+                                    <string key="text">IPA
+★★★★☆</string>
+                                </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" hasDetent="YES" id="2Rp-O2-d2d">
@@ -64,6 +66,10 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="textLabel" destination="Xec-nv-3NH" id="1ZT-Qf-bkA"/>
+                        <outlet property="titleLabel" destination="U54-xB-M8q" id="syw-rX-fV9"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="227" y="137.25"/>
@@ -73,7 +79,8 @@
             <objects>
                 <controller id="acP-jj-BsS" userLabel="Image Interface Controller" customClass="ImageInterfaceController" customModule="WatchKitExample_WatchKit_Extension">
                     <items>
-                        <imageView width="1" height="110" alignment="left" image="hopfenreich_bar" id="Guz-dO-ISz"/>
+                        <imageView width="1" height="100" alignment="left" image="placeholder" contentMode="scaleAspectFit" id="Guz-dO-ISz"/>
+                        <imageView width="1" height="100" alignment="left" image="placeholder" contentMode="scaleAspectFit" id="oz7-HW-ds5"/>
                         <group width="1" alignment="left" verticalAlignment="bottom" hasDetent="YES" id="Rnd-Kh-McW">
                             <items>
                                 <button width="65" alignment="left" title="Home" id="EyO-yc-wwE">
@@ -89,6 +96,10 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="firstImage" destination="Guz-dO-ISz" id="axd-HP-bfE"/>
+                        <outlet property="secondImage" destination="oz7-HW-ds5" id="cVn-nw-bLP"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="450" y="138"/>
