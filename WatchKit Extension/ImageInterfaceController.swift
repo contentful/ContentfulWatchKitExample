@@ -15,6 +15,10 @@ class ImageInterfaceController:BaseInterfaceController {
     override init(context: AnyObject?) {
         super.init(context: context)
 
+        if (self.context.fields["images"] == nil) {
+            return
+        }
+
         let images = self.context.fields["images"] as [CDAAsset]
 
         if images.count == 0 {
