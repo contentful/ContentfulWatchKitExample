@@ -24,6 +24,11 @@ class DetailInterfaceController: BaseInterfaceController {
                 if (field == "useopeninghours") {
                     labelText += "Open: "
                 }
+
+                if (field == "beerTypesServed") {
+                    labelText += "🍻 "
+                }
+
                 labelText += value as String
                 labelText += "\n"
             }
