@@ -58,7 +58,7 @@
                                         <action selector="homeTapped" destination="xx0-Jp-mAK" id="L2g-sm-ePh"/>
                                     </connections>
                                 </button>
-                                <button width="65" alignment="left" title="Next" id="Z9r-4x-vSQ">
+                                <button width="65" alignment="right" title="Next" id="Z9r-4x-vSQ">
                                     <connections>
                                         <segue destination="acP-jj-BsS" kind="push" id="KSb-M5-w0o"/>
                                     </connections>
@@ -88,7 +88,7 @@
                                         <action selector="homeTapped" destination="acP-jj-BsS" id="SWB-bQ-Myu"/>
                                     </connections>
                                 </button>
-                                <button width="65" alignment="left" title="Next" id="TWJ-p2-kDD">
+                                <button width="65" alignment="right" title="Next" id="TWJ-p2-kDD">
                                     <connections>
                                         <segue destination="40D-kr-Uum" kind="push" id="2D0-99-LFi"/>
                                     </connections>
