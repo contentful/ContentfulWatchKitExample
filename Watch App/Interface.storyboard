@@ -109,7 +109,7 @@
             <objects>
                 <controller id="40D-kr-Uum" userLabel="Map Interface Controller" customClass="MapInterfaceController" customModule="WatchKitExample_WatchKit_Extension">
                     <items>
-                        <map width="1" height="109" alignment="left" id="yPt-Ry-xMb"/>
+                        <map width="1" height="1" heightAdjustment="-39" alignment="left" id="yPt-Ry-xMb"/>
                         <button width="1" alignment="left" title="Home" id="wc3-gW-Pv6">
                             <connections>
                                 <action selector="homeTapped" destination="40D-kr-Uum" id="g0b-g8-t12"/>
