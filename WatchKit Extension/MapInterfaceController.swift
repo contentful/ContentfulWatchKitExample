@@ -14,12 +14,12 @@ class MapInterfaceController: BaseInterfaceController {
     override init(context: AnyObject?) {
         super.init(context: context)
 
-        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 1.0, longitudeDelta: 1.0)
+        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
         let location = self.context.CLLocationCoordinate2DFromFieldWithIdentifier("location")
 
         mapView.addAnnotation(location, withPinColor: .Red)
-        mapView.setCoordinateRegion(MKCoordinateRegion(center: location, span: coordinateSpan))
         mapView.setMapRect(MKMapRect(origin: MKMapPointForCoordinate(location),
-            size: MKMapSize(width: coordinateSpan.latitudeDelta, height: coordinateSpan.latitudeDelta)))
+            size: MKMapSize(width: 0.5, height: 0.5)))
+        mapView.setCoordinateRegion(MKCoordinateRegion(center: location, span: coordinateSpan))
     }
 }
