@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01129CD1C10B86C2CA68A960 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		A16DED7E1A31D63B007F09E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16DED7D1A31D63B007F09E8 /* MapKit.framework */; };
 		A171BC8C1A24AF4D0078E938 /* ImageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171BC8A1A24AED50078E938 /* ImageInterfaceController.swift */; };
 		A171BC8D1A24AF530078E938 /* MapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171BC881A24AE2D0078E938 /* MapInterfaceController.swift */; };
 		A171BC901A24B1120078E938 /* BaseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171BC8E1A24B0F00078E938 /* BaseInterfaceController.swift */; };
@@ -26,7 +26,6 @@
 		A1CA0B0B1A1CE70600451409 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CA0B091A1CE6FE00451409 /* DetailInterfaceController.swift */; };
 		A1DCEFFA1A1CC9FC003FCAA7 /* NewsTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCEFF81A1CC90E003FCAA7 /* NewsTableRowController.swift */; };
 		CEC3A6E5193EA7356652EC63 /* libPods-WatchKitExample WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8466B575026925990267E863 /* libPods-WatchKitExample WatchKit Extension.a */; };
-		DE214B47B11BC782E5D2D681 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +62,12 @@
 /* Begin PBXFileReference section */
 		56798726EB0C17DCA9417C8A /* Pods-WatchKitExample WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchKitExample WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchKitExample WatchKit Extension/Pods-WatchKitExample WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		8466B575026925990267E863 /* libPods-WatchKitExample WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WatchKitExample WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16DED7D1A31D63B007F09E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A171BC881A24AE2D0078E938 /* MapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInterfaceController.swift; sourceTree = "<group>"; };
 		A171BC8A1A24AED50078E938 /* ImageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInterfaceController.swift; sourceTree = "<group>"; };
 		A171BC8E1A24B0F00078E938 /* BaseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInterfaceController.swift; sourceTree = "<group>"; };
+		A179EA8A1A31C97F001155AE /* WatchKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WatchKitExample.entitlements; sourceTree = "<group>"; };
+		A179EA8B1A31C993001155AE /* WatchKitExample WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchKitExample WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		A1992C551A1CA1F6005A48B8 /* WatchKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1992C591A1CA1F6005A48B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1992C5A1A1CA1F6005A48B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01129CD1C10B86C2CA68A960 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16DED7E1A31D63B007F09E8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +111,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1992C811A1CA20F005A48B8 /* WatchKit.framework in Frameworks */,
-				DE214B47B11BC782E5D2D681 /* (null) in Frameworks */,
 				CEC3A6E5193EA7356652EC63 /* libPods-WatchKitExample WatchKit Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +158,7 @@
 				A1992C631A1CA1F6005A48B8 /* LaunchScreen.xib */,
 				A1992C5E1A1CA1F6005A48B8 /* Main.storyboard */,
 				A1992C5C1A1CA1F6005A48B8 /* ViewController.swift */,
+				A179EA8A1A31C97F001155AE /* WatchKitExample.entitlements */,
 			);
 			path = "Main App";
 			sourceTree = "<group>";
@@ -164,6 +166,7 @@
 		A1992C7F1A1CA20F005A48B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A16DED7D1A31D63B007F09E8 /* MapKit.framework */,
 				A1992C801A1CA20F005A48B8 /* WatchKit.framework */,
 				8466B575026925990267E863 /* libPods-WatchKitExample WatchKit Extension.a */,
 			);
@@ -182,6 +185,7 @@
 				A1992C851A1CA20F005A48B8 /* InterfaceController.swift */,
 				A171BC881A24AE2D0078E938 /* MapInterfaceController.swift */,
 				A1DCEFF81A1CC90E003FCAA7 /* NewsTableRowController.swift */,
+				A179EA8B1A31C993001155AE /* WatchKitExample WatchKit Extension.entitlements */,
 			);
 			path = "WatchKit Extension";
 			sourceTree = "<group>";
@@ -265,9 +269,21 @@
 				TargetAttributes = {
 					A1992C541A1CA1F6005A48B8 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = RWJ5E97L7R;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A1992C7D1A1CA20F005A48B8 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = RWJ5E97L7R;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A1992C8A1A1CA20F005A48B8 = {
 						CreatedOnToolsVersion = 6.2;
@@ -497,10 +513,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Main App/WatchKitExample.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Main App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -508,10 +528,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Main App/WatchKitExample.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Main App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -551,6 +575,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 56798726EB0C17DCA9417C8A /* Pods-WatchKitExample WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchKit Extension/WatchKitExample WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -558,6 +585,7 @@
 				INFOPLIST_FILE = "WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "WatchKit Extension/BridgingHeader.h";
 			};
@@ -567,9 +595,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E686B878F3BB806E7491ED53 /* Pods-WatchKitExample WatchKit Extension.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchKit Extension/WatchKitExample WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "WatchKit Extension/BridgingHeader.h";
 			};

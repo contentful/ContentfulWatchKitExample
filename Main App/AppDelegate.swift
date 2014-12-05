@@ -6,17 +6,38 @@
 //  Copyright (c) 2014 Contentful GmbH. All rights reserved.
 //
 
+import CoreLocation
+import MapKit
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
+    var locationManager: CLLocationManager?
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        locationManager = CLLocationManager()
+        locationManager!.delegate = self;
+        locationManager!.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager!.distanceFilter = 1000
+        locationManager!.requestWhenInUseAuthorization()
+        locationManager!.startUpdatingLocation()
         return true
+    }
+
+    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
+        if newLocation == nil {
+            return
+        }
+
+        var location = newLocation!.coordinate
+        let userDefaults = NSUserDefaults(suiteName: "group.com.contentful.WatchKitExample")
+        userDefaults!.setValue(NSData(bytes: &location, length: sizeof(CLLocationCoordinate2D)), forKey:"currentLocation")
+        userDefaults!.synchronize()
+
+        NSLog("Written location to user defaults.")
     }
 
     func applicationWillResignActive(application: UIApplication) {
