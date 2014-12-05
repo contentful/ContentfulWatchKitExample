@@ -80,8 +80,8 @@
             <objects>
                 <controller id="acP-jj-BsS" userLabel="Image Interface Controller" customClass="ImageInterfaceController" customModule="WatchKitExample_WatchKit_Extension">
                     <items>
-                        <imageView width="1" height="100" alignment="left" image="placeholder" contentMode="scaleAspectFit" id="Guz-dO-ISz"/>
-                        <imageView width="1" height="100" alignment="left" image="placeholder" contentMode="scaleAspectFit" id="oz7-HW-ds5"/>
+                        <imageView width="1" height="100" alignment="left" image="placeholder" contentMode="center" id="Guz-dO-ISz"/>
+                        <imageView width="1" height="100" alignment="left" image="placeholder" contentMode="center" id="oz7-HW-ds5"/>
                         <group width="1" alignment="left" verticalAlignment="bottom" hasDetent="YES" id="Rnd-Kh-McW">
                             <items>
                                 <button width="65" alignment="left" title="Home" id="EyO-yc-wwE">
