@@ -132,10 +132,10 @@
 			children = (
 				A1992C571A1CA1F6005A48B8 /* Main App */,
 				A1992C7F1A1CA20F005A48B8 /* Frameworks */,
+				9DAD3AE9FDFB0EE1EB211FCB /* Pods */,
 				A1992C561A1CA1F6005A48B8 /* Products */,
 				A1992C8F1A1CA20F005A48B8 /* Watch App */,
 				A1992C821A1CA20F005A48B8 /* WatchKit Extension */,
-				9DAD3AE9FDFB0EE1EB211FCB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
