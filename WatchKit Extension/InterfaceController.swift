@@ -49,6 +49,11 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
             success: { (response, array) -> Void in
                 self.newsItems = array.items as [CDAEntry]
 
+                if self.newsItems.count == 0 {
+                    self.fetchEntries(CLLocationCoordinate2D(latitude: 52.52191, longitude: 13.413215))
+                    return
+                }
+
                 self.newsTable.setNumberOfRows(countElements(self.newsItems), withRowType: "NewsTableRowController")
 
                 for (index, entry) in enumerate(self.newsItems) {
