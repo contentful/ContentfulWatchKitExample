@@ -15,10 +15,11 @@
                                 <tableRow identifier="NewsTableRowController" id="BwI-Ii-zru" customClass="NewsTableRowController" customModule="WatchKitExample_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="40" alignment="left" id="FEM-db-17G">
                                         <items>
-                                            <label width="1" height="39" alignment="left" text="Label" id="C4l-dr-mTa">
+                                            <label width="1" height="39" alignment="left" text="Label" textAlignment="right" numberOfLines="2" id="C4l-dr-mTa">
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
                                         </items>
+                                        <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                     </group>
                                     <connections>
                                         <outlet property="interfaceLabel" destination="C4l-dr-mTa" id="S7c-B0-KAT"/>
