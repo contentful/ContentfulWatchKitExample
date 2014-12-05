@@ -39,7 +39,11 @@ class ImageInterfaceController:BaseInterfaceController {
     }
 
     func fetchAsset(asset: CDAAsset, completionHandler: (UIImage!) -> Void) {
-        let request = NSURLRequest(URL: asset.URL)
+        if asset.URL == nil {
+            return
+        }
+
+        let request = NSURLRequest(URL: asset.imageURLWithSize(CGSize(width: 200, height: 200)))
 
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
             (response, data, error) -> Void in
