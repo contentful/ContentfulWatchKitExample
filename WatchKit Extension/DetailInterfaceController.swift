@@ -12,8 +12,8 @@ class DetailInterfaceController: BaseInterfaceController {
     @IBOutlet weak var textLabel: WKInterfaceLabel!
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
 
-    override init(context: AnyObject?) {
-        super.init(context: context)
+    override func awakeWithContext(context: AnyObject!) {
+        super.awakeWithContext(context);
 
         titleLabel.setText(self.context.fields["nameOfBar"] as? String)
 

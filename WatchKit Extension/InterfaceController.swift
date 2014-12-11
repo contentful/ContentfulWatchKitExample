@@ -19,10 +19,10 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         return newsItems[rowIndex]
     }
 
-    override init(context: AnyObject?) {
+    override init!() {
         client = CDAClient(spaceKey: "exembnlnz9oo", accessToken: "2ec43b32ffdda511b09abfd6a5b8ff65125cd19a4f6377d6a1e9540d34120052")
 
-        super.init(context: context)
+        super.init()
     }
 
     override func willActivate() {

@@ -30,8 +30,8 @@ class ImageInterfaceController:BaseInterfaceController {
         secondImage.startAnimating()
     }
 
-    override init(context: AnyObject?) {
-        super.init(context: context)
+    override func awakeWithContext(context: AnyObject!) {
+        super.awakeWithContext(context)
 
         if (self.context.fields["images"] == nil) {
             return

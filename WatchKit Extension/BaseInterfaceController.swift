@@ -9,15 +9,18 @@
 import WatchKit
 
 class BaseInterfaceController: WKInterfaceController {
-    let context:CDAEntry
+    var context:CDAEntry! = nil
+
+    override init!() {
+        super.init()
+    }
 
     override func contextForSegueWithIdentifier(identifier: String) -> AnyObject? {
         return context
     }
 
-    override init(context: AnyObject?) {
+    override func awakeWithContext(context: AnyObject!) {
         self.context = context as CDAEntry
-        super.init(context: context)
     }
 
     @IBAction func homeTapped() {
