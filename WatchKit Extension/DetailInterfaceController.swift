@@ -29,7 +29,7 @@ class DetailInterfaceController: BaseInterfaceController {
                     labelText += "🍻 "
                 }
 
-                labelText += value as String
+                labelText += value as! String
                 labelText += "\n"
             }
         }
@@ -37,7 +37,7 @@ class DetailInterfaceController: BaseInterfaceController {
         labelText += "\n"
 
         if let value: AnyObject = self.context.fields["smoking"]  {
-            if (value as NSNumber).boolValue {
+            if (value as! NSNumber).boolValue {
                 labelText += "🚬 allowed\n"
             } else {
                 labelText += "No smoking 🚫\n"
@@ -45,7 +45,7 @@ class DetailInterfaceController: BaseInterfaceController {
         }
 
         if let value: AnyObject = self.context.fields["MG5chCyoh2miXeaz"]  {
-            if (value as NSNumber).boolValue {
+            if (value as! NSNumber).boolValue {
                 labelText += "Sit outdoors? 👍\n"
             } else {
                 labelText += "Sit outdoors? 👎\n"

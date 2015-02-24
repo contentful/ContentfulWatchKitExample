@@ -19,7 +19,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         return newsItems[rowIndex]
     }
 
-    override init!() {
+    override init() {
         client = CDAClient(spaceKey: "exembnlnz9oo", accessToken: "2ec43b32ffdda511b09abfd6a5b8ff65125cd19a4f6377d6a1e9540d34120052")
 
         super.init()
@@ -31,7 +31,9 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         let locationData = userDefaults!.dataForKey("currentLocation")
 
         var location = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-        locationData!.getBytes(&location, length: sizeof(CLLocationCoordinate2D))
+        if let locationData = locationData {
+            locationData.getBytes(&location, length: sizeof(CLLocationCoordinate2D))
+        }
 
         NSLog("Current location: %.5f, %5.f", location.latitude, location.longitude)
 
@@ -47,17 +49,17 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     func fetchEntries(location: CLLocationCoordinate2D) {
         client.fetchEntriesMatching(["content_type": "6LmYY0rGhOaUyweiwSm4m", "order": "-sys.createdAt", "fields.visible": true, "fields.location[within]": [ location.latitude, location.longitude, 1000 ] ],
             success: { (response, array) -> Void in
-                self.newsItems = array.items as [CDAEntry]
+                self.newsItems = array.items as! [CDAEntry]
 
                 if self.newsItems.count == 0 {
                     self.fetchEntries(CLLocationCoordinate2D(latitude: 52.52191, longitude: 13.413215))
                     return
                 }
 
-                self.newsTable.setNumberOfRows(countElements(self.newsItems), withRowType: "NewsTableRowController")
+                self.newsTable.setNumberOfRows(count(self.newsItems), withRowType: "NewsTableRowController")
 
                 for (index, entry) in enumerate(self.newsItems) {
-                    let row = self.newsTable.rowControllerAtIndex(index) as NewsTableRowController
+                    let row = self.newsTable.rowControllerAtIndex(index) as! NewsTableRowController
 
                     row.interfaceLabel.setText((entry.fields as NSDictionary)["nameOfBar"] as? String)
                 }

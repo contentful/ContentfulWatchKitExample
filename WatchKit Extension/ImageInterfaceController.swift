@@ -37,7 +37,7 @@ class ImageInterfaceController:BaseInterfaceController {
             return
         }
 
-        let images = self.context.fields["images"] as [CDAAsset]
+        let images = self.context.fields["images"] as! [CDAAsset]
 
         if images.count == 0 {
             return
