@@ -26,24 +26,27 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     }
 
     override func willActivate() {
-        let userDefaults = NSUserDefaults(suiteName: "group.com.contentful.WatchKitExample")
-        userDefaults!.synchronize()
-        let locationData = userDefaults!.dataForKey("currentLocation")
+        WKInterfaceController.openParentApplication([NSObject:AnyObject]()) {
+            (replyInfo, error) -> Void in
+            if let error = error {
+                NSLog("Error: %@", error)
+            }
 
-        var location = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-        if let locationData = locationData {
-            locationData.getBytes(&location, length: sizeof(CLLocationCoordinate2D))
+            var location = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+            if let locationData = replyInfo["currentLocation"] as? NSData {
+                locationData.getBytes(&location, length: sizeof(CLLocationCoordinate2D))
+            }
+
+            NSLog("Current location: %.5f, %5.f", location.latitude, location.longitude)
+
+            self.fetchEntries(location)
         }
-
-        NSLog("Current location: %.5f, %5.f", location.latitude, location.longitude)
 
         /* Valid locations:
             37.33170, -122          for SF
             40.75889, -73.98513     for NY
             52.52191, 13.413215     for Berlin
          */
-
-        fetchEntries(location)
     }
 
     func fetchEntries(location: CLLocationCoordinate2D) {
