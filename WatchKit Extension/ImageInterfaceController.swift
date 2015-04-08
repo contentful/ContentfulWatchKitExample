@@ -9,25 +9,43 @@
 import WatchKit
 
 class ImageInterfaceController:BaseInterfaceController {
+    private let LoadingImageIdentifier = "LoadingImageIdentifier"
+
     @IBOutlet weak var firstImage: WKInterfaceImage!
     @IBOutlet weak var secondImage: WKInterfaceImage!
 
-    func generateLoadingAnimation() {
+    func loadingAnimationImage() -> UIImage? {
         let sheet = UIImage(named: "activity-medium")
         var images = [UIImage]()
+
+        if sheet == nil {
+            return nil
+        }
 
         for (var currentX = 0; currentX < Int(sheet!.size.width); currentX += 30) {
             let splitRef = CGImageCreateWithImageInRect(sheet?.CGImage, CGRect(x: CGFloat(currentX), y: 0.0, width: 30.0, height: sheet!.size.height * 2))
             images.append(UIImage(CGImage: splitRef)!)
         }
 
-        let image = UIImage.animatedImageWithImages(images, duration: 0.1)
+        let animatedImage = UIImage.animatedImageWithImages(images, duration: 0.1)
+        WKInterfaceDevice.currentDevice().addCachedImage(animatedImage, name: LoadingImageIdentifier)
+        return animatedImage
+    }
 
-        firstImage.setImage(image)
-        firstImage.startAnimating()
+    func generateLoadingAnimation() {
+        if let _: AnyObject = WKInterfaceDevice.currentDevice().cachedImages[LoadingImageIdentifier] {
+            firstImage.setImageNamed(LoadingImageIdentifier)
+            firstImage.startAnimating()
 
-        secondImage.setImage(image)
-        secondImage.startAnimating()
+            secondImage.setImageNamed(LoadingImageIdentifier)
+            secondImage.startAnimating()
+        } else if let image = loadingAnimationImage() {
+            firstImage.setImage(image)
+            firstImage.startAnimating()
+
+            secondImage.setImage(image)
+            secondImage.startAnimating()
+        }
     }
 
     override func awakeWithContext(context: AnyObject!) {
