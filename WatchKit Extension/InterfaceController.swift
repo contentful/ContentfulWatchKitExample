@@ -10,6 +10,7 @@ import WatchKit
 import Foundation
 
 class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
+    let defaultCoordinate = CLLocationCoordinate2D(latitude: 52.52191, longitude: 13.413215)
 
     var client: CDAClient
     var newsItems: [CDAEntry]!
@@ -32,9 +33,11 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
                 NSLog("Error: %@", error)
             }
 
-            var location = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-            if let locationData = replyInfo["currentLocation"] as? NSData {
-                locationData.getBytes(&location, length: sizeof(CLLocationCoordinate2D))
+            var location = self.defaultCoordinate
+            if let replyInfo = replyInfo {
+                if let locationData = replyInfo["currentLocation"] as? NSData {
+                    locationData.getBytes(&location, length: sizeof(CLLocationCoordinate2D))
+                }
             }
 
             NSLog("Current location: %.5f, %5.f", location.latitude, location.longitude)

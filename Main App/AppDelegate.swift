@@ -37,7 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                 var coordinate = location.coordinate
                 reply(["currentLocation": NSData(bytes: &coordinate, length: sizeof(CLLocationCoordinate2D))])
             } else {
-                self.reply = reply
+                if !CLLocationManager.locationServicesEnabled() || CLLocationManager.authorizationStatus() != .AuthorizedAlways {
+                    reply(nil)
+                } else {
+                    self.reply = reply
+                }
             }
         }
     }
