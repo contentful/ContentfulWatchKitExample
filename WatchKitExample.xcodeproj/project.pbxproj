@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BBF7B8973B4CC7CB8C35CB0 /* libPods-WatchKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9EFF9E5138A3E864A83B20 /* libPods-WatchKitExample.a */; };
 		A16DED7E1A31D63B007F09E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16DED7D1A31D63B007F09E8 /* MapKit.framework */; };
 		A171BC8C1A24AF4D0078E938 /* ImageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171BC8A1A24AED50078E938 /* ImageInterfaceController.swift */; };
 		A171BC8D1A24AF530078E938 /* MapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171BC881A24AE2D0078E938 /* MapInterfaceController.swift */; };
@@ -25,6 +26,8 @@
 		A1992C981A1CA20F005A48B8 /* WatchKitExample WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A1992C7E1A1CA20F005A48B8 /* WatchKitExample WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A1CA0B0B1A1CE70600451409 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CA0B091A1CE6FE00451409 /* DetailInterfaceController.swift */; };
 		A1DCEFFA1A1CC9FC003FCAA7 /* NewsTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCEFF81A1CC90E003FCAA7 /* NewsTableRowController.swift */; };
+		A1EA03961AD685D300AC6C9A /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA03951AD685D300AC6C9A /* Locations.swift */; };
+		A1EA03971AD685D300AC6C9A /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA03951AD685D300AC6C9A /* Locations.swift */; };
 		D245F3A01D42786A986E9C4A /* libPods-WatchKitExample WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F02DD82A59598445A1FBF192 /* libPods-WatchKitExample WatchKit Extension.a */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +64,10 @@
 
 /* Begin PBXFileReference section */
 		17263925E928AB8FC5D80922 /* Pods-WatchKitExample WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchKitExample WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchKitExample WatchKit Extension/Pods-WatchKitExample WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		338C55B3DEE699ED0DF018DF /* Pods-WatchKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchKitExample/Pods-WatchKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		419CD544A8700BC4196F241F /* Pods-WatchKitExample WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchKitExample WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchKitExample WatchKit Extension/Pods-WatchKitExample WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		4E0E4C65D310517A201D49D3 /* Pods-WatchKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchKitExample/Pods-WatchKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		9E9EFF9E5138A3E864A83B20 /* libPods-WatchKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WatchKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16DED7D1A31D63B007F09E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A171BC881A24AE2D0078E938 /* MapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInterfaceController.swift; sourceTree = "<group>"; };
 		A171BC8A1A24AED50078E938 /* ImageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInterfaceController.swift; sourceTree = "<group>"; };
@@ -87,6 +93,8 @@
 		A1CA0B091A1CE6FE00451409 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
 		A1DCEFF81A1CC90E003FCAA7 /* NewsTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableRowController.swift; sourceTree = "<group>"; };
 		A1DCEFFB1A1CCADF003FCAA7 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		A1EA03941AD67EC000AC6C9A /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		A1EA03951AD685D300AC6C9A /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		F02DD82A59598445A1FBF192 /* libPods-WatchKitExample WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WatchKitExample WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16DED7E1A31D63B007F09E8 /* MapKit.framework in Frameworks */,
+				7BBF7B8973B4CC7CB8C35CB0 /* libPods-WatchKitExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +132,8 @@
 			children = (
 				17263925E928AB8FC5D80922 /* Pods-WatchKitExample WatchKit Extension.debug.xcconfig */,
 				419CD544A8700BC4196F241F /* Pods-WatchKitExample WatchKit Extension.release.xcconfig */,
+				4E0E4C65D310517A201D49D3 /* Pods-WatchKitExample.debug.xcconfig */,
+				338C55B3DEE699ED0DF018DF /* Pods-WatchKitExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -153,9 +164,11 @@
 			isa = PBXGroup;
 			children = (
 				A1992C5A1A1CA1F6005A48B8 /* AppDelegate.swift */,
+				A1EA03941AD67EC000AC6C9A /* BridgingHeader.h */,
 				A1992C611A1CA1F6005A48B8 /* Images.xcassets */,
 				A1992C591A1CA1F6005A48B8 /* Info.plist */,
 				A1992C631A1CA1F6005A48B8 /* LaunchScreen.xib */,
+				A1EA03951AD685D300AC6C9A /* Locations.swift */,
 				A1992C5E1A1CA1F6005A48B8 /* Main.storyboard */,
 				A1992C5C1A1CA1F6005A48B8 /* ViewController.swift */,
 				A179EA8A1A31C97F001155AE /* WatchKitExample.entitlements */,
@@ -169,6 +182,7 @@
 				A16DED7D1A31D63B007F09E8 /* MapKit.framework */,
 				A1992C801A1CA20F005A48B8 /* WatchKit.framework */,
 				F02DD82A59598445A1FBF192 /* libPods-WatchKitExample WatchKit Extension.a */,
+				9E9EFF9E5138A3E864A83B20 /* libPods-WatchKitExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,10 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1992C741A1CA1F6005A48B8 /* Build configuration list for PBXNativeTarget "WatchKitExample" */;
 			buildPhases = (
+				CADE691FCD7B51B30B7C31A6 /* Check Pods Manifest.lock */,
 				A1992C511A1CA1F6005A48B8 /* Sources */,
 				A1992C521A1CA1F6005A48B8 /* Frameworks */,
 				A1992C531A1CA1F6005A48B8 /* Resources */,
 				A1992C9F1A1CA20F005A48B8 /* Embed App Extensions */,
+				450E9D246791D92AC26C8F95 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,7 +358,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		450E9D246791D92AC26C8F95 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchKitExample/Pods-WatchKitExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		516619165BA4E455CC6C7B23 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CADE691FCD7B51B30B7C31A6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EA03961AD685D300AC6C9A /* Locations.swift in Sources */,
 				A1992C5D1A1CA1F6005A48B8 /* ViewController.swift in Sources */,
 				A1992C5B1A1CA1F6005A48B8 /* AppDelegate.swift in Sources */,
 			);
@@ -391,6 +438,7 @@
 				A1CA0B0B1A1CE70600451409 /* DetailInterfaceController.swift in Sources */,
 				A171BC8D1A24AF530078E938 /* MapInterfaceController.swift in Sources */,
 				A171BC8C1A24AF4D0078E938 /* ImageInterfaceController.swift in Sources */,
+				A1EA03971AD685D300AC6C9A /* Locations.swift in Sources */,
 				A1DCEFFA1A1CC9FC003FCAA7 /* NewsTableRowController.swift in Sources */,
 				A171BC901A24B1120078E938 /* BaseInterfaceController.swift in Sources */,
 				A1992C861A1CA20F005A48B8 /* InterfaceController.swift in Sources */,
@@ -511,6 +559,7 @@
 		};
 		A1992C751A1CA1F6005A48B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E0E4C65D310517A201D49D3 /* Pods-WatchKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Main App/WatchKitExample.entitlements";
@@ -521,11 +570,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Main App/BridgingHeader.h";
 			};
 			name = Debug;
 		};
 		A1992C761A1CA1F6005A48B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338C55B3DEE699ED0DF018DF /* Pods-WatchKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Main App/WatchKitExample.entitlements";
@@ -536,6 +587,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Main App/BridgingHeader.h";
 			};
 			name = Release;
 		};

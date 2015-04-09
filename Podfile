@@ -1,4 +1,11 @@
 inhibit_all_warnings!
+#use_frameworks!
+
+target 'WatchKitExample' do
+
+pod 'ContentfulDeliveryAPI'
+
+end
 
 target 'WatchKitExample WatchKit Extension' do
 
