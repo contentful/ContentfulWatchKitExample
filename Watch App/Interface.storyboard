@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A388a" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D130a" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -10,19 +10,24 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitExample_Watch_App" customModuleProvider="target">
                     <items>
-                        <table alignment="left" layout="vertical" id="vQ5-iQ-fjP">
+                        <table alignment="left" id="vQ5-iQ-fjP">
                             <items>
                                 <tableRow identifier="NewsTableRowController" id="BwI-Ii-zru" customClass="NewsTableRowController" customModule="WatchKitExample_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="40" alignment="left" id="FEM-db-17G">
+                                    <group key="rootItem" width="1" height="60" alignment="left" layout="vertical" radius="5" id="FEM-db-17G">
                                         <items>
-                                            <label width="1" height="39" alignment="left" text="Label" textAlignment="right" numberOfLines="2" id="C4l-dr-mTa">
+                                            <label width="1" height="39" alignment="left" text="YOLO Bar" textAlignment="right" numberOfLines="2" id="C4l-dr-mTa">
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
+                                            <label alignment="right" text="123m" textAlignment="right" id="9dJ-op-36N">
+                                                <color key="textColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
                                         </items>
-                                        <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.13333333333333333" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                     </group>
                                     <connections>
-                                        <outlet property="interfaceLabel" destination="C4l-dr-mTa" id="S7c-B0-KAT"/>
+                                        <outlet property="distanceLabel" destination="9dJ-op-36N" id="zB6-EZ-6YG"/>
+                                        <outlet property="nameLabel" destination="C4l-dr-mTa" id="4uC-HM-ruM"/>
                                         <segue destination="xx0-Jp-mAK" kind="push" id="hu9-WA-SD4"/>
                                     </connections>
                                 </tableRow>
@@ -41,18 +46,19 @@
             <objects>
                 <controller id="xx0-Jp-mAK" customClass="DetailInterfaceController" customModule="WatchKitExample_WatchKit_Extension">
                     <items>
-                        <group width="1" height="200" alignment="left" layout="vertical" hasDetent="YES" id="Rug-ZP-jOT">
+                        <group width="1" height="220" alignment="left" layout="vertical" id="Rug-ZP-jOT">
                             <items>
-                                <label width="1" alignment="left" text="Bar" textAlignment="center" id="U54-xB-M8q">
+                                <label width="1" alignment="left" text="Bar" textAlignment="center" numberOfLines="2" id="U54-xB-M8q">
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
                                 <label width="1" alignment="left" numberOfLines="0" id="Xec-nv-3NH">
                                     <string key="text">IPA
 ★★★★☆</string>
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                 </label>
                             </items>
                         </group>
-                        <group width="1" alignment="left" hasDetent="YES" id="2Rp-O2-d2d">
+                        <group width="1" alignment="left" id="2Rp-O2-d2d">
                             <items>
                                 <button width="65" alignment="left" title="Home" id="gcP-9R-Diy">
                                     <connections>
@@ -68,6 +74,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="nextButton" destination="Z9r-4x-vSQ" id="Wxj-FK-APE"/>
                         <outlet property="textLabel" destination="Xec-nv-3NH" id="1ZT-Qf-bkA"/>
                         <outlet property="titleLabel" destination="U54-xB-M8q" id="syw-rX-fV9"/>
                     </connections>
@@ -82,7 +89,7 @@
                     <items>
                         <imageView width="1" height="100" alignment="left" image="placeholder" contentMode="center" id="Guz-dO-ISz"/>
                         <imageView width="1" height="100" alignment="left" image="placeholder" contentMode="center" id="oz7-HW-ds5"/>
-                        <group width="1" alignment="left" verticalAlignment="bottom" hasDetent="YES" id="Rnd-Kh-McW">
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="Rnd-Kh-McW">
                             <items>
                                 <button width="65" alignment="left" title="Home" id="EyO-yc-wwE">
                                     <connections>
@@ -99,6 +106,7 @@
                     </items>
                     <connections>
                         <outlet property="firstImage" destination="Guz-dO-ISz" id="axd-HP-bfE"/>
+                        <outlet property="nextButton" destination="TWJ-p2-kDD" id="htt-zy-e6e"/>
                         <outlet property="secondImage" destination="oz7-HW-ds5" id="cVn-nw-bLP"/>
                     </connections>
                 </controller>

@@ -51,6 +51,8 @@ class ImageInterfaceController:BaseInterfaceController {
     override func awakeWithContext(context: AnyObject!) {
         super.awakeWithContext(context)
 
+        nextButton.setTitle("Map")
+
         if (self.context.fields["images"] == nil) {
             return
         }

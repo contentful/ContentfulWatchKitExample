@@ -11,6 +11,8 @@ import WatchKit
 class BaseInterfaceController: WKInterfaceController {
     var context:CDAEntry! = nil
 
+    @IBOutlet weak var nextButton: WKInterfaceButton!
+
     override init() {
         super.init()
     }
