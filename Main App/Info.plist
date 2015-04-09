@@ -37,6 +37,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Show nearest bars.</string>
+	<string>To show bars near your current location.</string>
 </dict>
 </plist>

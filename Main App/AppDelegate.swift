@@ -31,8 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         return true
     }
 
-    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+    func applicationDidEnterBackground(application: UIApplication) {
+        if self.reply == nil {
+            locationManager?.stopUpdatingLocation()
+        }
+    }
 
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
         if let reply = reply {
             self.reply = reply
 
@@ -52,6 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         if self.bgTask == nil || self.bgTask! == UIBackgroundTaskInvalid {
             return
         }
+
+        locationManager?.stopUpdatingLocation()
 
         dispatch_after(2 * dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             UIApplication.sharedApplication().endBackgroundTask(self.bgTask!)
@@ -84,8 +91,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             reply(["currentLocation": NSData(bytes: &location, length: sizeof(CLLocationCoordinate2D))])
             endBackgroundTaskForWatchKitExtension()
         }
-
-        locationManager?.stopUpdatingLocation()
     }
 }
 
