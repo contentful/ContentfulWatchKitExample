@@ -17,6 +17,10 @@ class DetailsViewController: UIViewController, UIViewControllerTransitioningDele
     @IBOutlet weak var secondPhotoView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
 
+    @IBAction func closeTapped(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
     func imageTapped(sender: UITapGestureRecognizer) {
         if sender.view == nil {
             return
@@ -36,6 +40,7 @@ class DetailsViewController: UIViewController, UIViewControllerTransitioningDele
         size.width *= UIScreen.mainScreen().scale
         size.height *= UIScreen.mainScreen().scale
 
+        imageView.clipsToBounds = true
         imageView.offlineCaching_cda = true
         imageView.cda_setImageWithAsset(asset, size: size)
 
@@ -72,6 +77,12 @@ class DetailsViewController: UIViewController, UIViewControllerTransitioningDele
     }
 
     // MARK: UIViewControllerTransitioningDelegate
+
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let controller = CEPortalAnimationController()
+        controller.duration = 0.2
+        return controller
+    }
 
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let controller = CEPortalAnimationController()

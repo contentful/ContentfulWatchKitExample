@@ -58,7 +58,9 @@ class ViewController: CDAMapViewController, MKMapViewDelegate {
             let annotation = unsafeBitCast(view.annotation, NSObject.self)
             let identifier = annotation.valueForKey("identifier") as! NSString
             details.location = places?.filter { $0.entry.identifier == identifier }.first
-            presentViewController(details, animated: true, completion: nil)
+            presentViewController(details, animated: true) {
+                self.mapView.deselectAnnotation(view.annotation, animated: false)
+            }
         }
     }
 }
