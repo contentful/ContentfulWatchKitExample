@@ -15,7 +15,7 @@ class MapInterfaceController: BaseInterfaceController {
         super.awakeWithContext(context)
 
         let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
-        let location = self.context.CLLocationCoordinate2DFromFieldWithIdentifier("location")
+        let location = self.context.entry.CLLocationCoordinate2DFromFieldWithIdentifier("location")
 
         mapView.addAnnotation(location, withPinColor: .Red)
         mapView.setVisibleMapRect(MKMapRect(origin: MKMapPointForCoordinate(location),

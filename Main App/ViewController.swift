@@ -39,7 +39,7 @@ class ViewController: CDAMapViewController, MKMapViewDelegate {
         mapView.delegate = self
         mapView.showsUserLocation = true
 
-        let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         delegate.currentLocationCallback = { (location) in
             self.locations.fetchEntries(location) { (locations) in
@@ -54,7 +54,7 @@ class ViewController: CDAMapViewController, MKMapViewDelegate {
     func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
         if let details = storyboard?.instantiateViewControllerWithIdentifier("DetailsViewController") as? DetailsViewController {
             let annotation = unsafeBitCast(view.annotation, NSObject.self)
-            let identifier = annotation.valueForKey("identifier") as NSString
+            let identifier = annotation.valueForKey("identifier") as! NSString
             details.location = places?.filter { $0.entry.identifier == identifier }.first
             presentViewController(details, animated: true, completion: nil)
         }

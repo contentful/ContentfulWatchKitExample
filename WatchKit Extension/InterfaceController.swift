@@ -15,7 +15,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     @IBOutlet weak var newsTable: WKInterfaceTable!
 
     override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
-        return newsItems[rowIndex].entry
+        return newsItems[rowIndex]
     }
 
     override func willActivate() {
@@ -41,10 +41,10 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     func fetchEntries(location: CLLocationCoordinate2D) {
         locations.fetchEntries(location) { (locations) in
             self.newsItems = locations
-            self.newsTable.setNumberOfRows(countElements(self.newsItems), withRowType: "NewsTableRowController")
+            self.newsTable.setNumberOfRows(count(self.newsItems), withRowType: "NewsTableRowController")
 
             for (index, location) in enumerate(self.newsItems) {
-                let row = self.newsTable.rowControllerAtIndex(index) as NewsTableRowController
+                let row = self.newsTable.rowControllerAtIndex(index) as! NewsTableRowController
 
                 row.distanceLabel.setText(String(format: "%.0fm", location.distance))
                 row.nameLabel.setText((location.entry.fields as NSDictionary)["nameOfBar"] as? String)

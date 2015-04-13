@@ -53,11 +53,11 @@ class ImageInterfaceController:BaseInterfaceController {
 
         nextButton.setTitle("Map")
 
-        if (self.context.fields["images"] == nil) {
+        if (self.context.entry.fields["images"] == nil) {
             return
         }
 
-        let images = self.context.fields["images"] as! [CDAAsset]
+        let images = self.context.entry.fields["images"] as! [CDAAsset]
 
         if images.count == 0 {
             return

@@ -9,7 +9,7 @@
 import WatchKit
 
 class BaseInterfaceController: WKInterfaceController {
-    var context:CDAEntry! = nil
+    var context:Location! = nil
 
     @IBOutlet weak var nextButton: WKInterfaceButton!
 
@@ -22,7 +22,7 @@ class BaseInterfaceController: WKInterfaceController {
     }
 
     override func awakeWithContext(context: AnyObject!) {
-        self.context = context as! CDAEntry
+        self.context = context as! Location
     }
 
     @IBAction func homeTapped() {
