@@ -36,6 +36,8 @@ class ViewController: CDAMapViewController, MKMapViewDelegate {
     }
 
     override func viewWillAppear(animated: Bool) {
+        CLLocationManager().requestWhenInUseAuthorization()
+
         mapView.delegate = self
         mapView.showsUserLocation = true
 
