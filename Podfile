@@ -5,6 +5,7 @@ target 'WatchKitExample' do
 
 #pod 'Concorde/Contentful', :git => 'https://github.com/contentful-labs/Concorde'
 pod 'ContentfulDeliveryAPI'
+pod 'JTSImageViewController'
 pod 'VCTransitionsLibrary'
 
 end

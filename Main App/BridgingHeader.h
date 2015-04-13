@@ -7,4 +7,5 @@
 //
 
 #import <ContentfulDeliveryAPI/ContentfulDeliveryAPI.h>
+#import <JTSImageViewController/JTSImageViewController.h>
 #import <VCTransitionsLibrary/CEPortalAnimationController.h>

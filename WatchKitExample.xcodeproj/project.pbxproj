@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7BBF7B8973B4CC7CB8C35CB0 /* libPods-WatchKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9EFF9E5138A3E864A83B20 /* libPods-WatchKitExample.a */; };
+		A14BE8161AD6BD26008ECC2F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14BE8151AD6BD26008ECC2F /* DetailsViewController.swift */; };
 		A16DED7E1A31D63B007F09E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16DED7D1A31D63B007F09E8 /* MapKit.framework */; };
 		A171BC8C1A24AF4D0078E938 /* ImageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171BC8A1A24AED50078E938 /* ImageInterfaceController.swift */; };
 		A171BC8D1A24AF530078E938 /* MapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171BC881A24AE2D0078E938 /* MapInterfaceController.swift */; };
@@ -68,6 +69,7 @@
 		419CD544A8700BC4196F241F /* Pods-WatchKitExample WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchKitExample WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchKitExample WatchKit Extension/Pods-WatchKitExample WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		4E0E4C65D310517A201D49D3 /* Pods-WatchKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchKitExample/Pods-WatchKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		9E9EFF9E5138A3E864A83B20 /* libPods-WatchKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WatchKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14BE8151AD6BD26008ECC2F /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A16DED7D1A31D63B007F09E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A171BC881A24AE2D0078E938 /* MapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInterfaceController.swift; sourceTree = "<group>"; };
 		A171BC8A1A24AED50078E938 /* ImageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInterfaceController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				A1992C5A1A1CA1F6005A48B8 /* AppDelegate.swift */,
 				A1EA03941AD67EC000AC6C9A /* BridgingHeader.h */,
+				A14BE8151AD6BD26008ECC2F /* DetailsViewController.swift */,
 				A1992C611A1CA1F6005A48B8 /* Images.xcassets */,
 				A1992C591A1CA1F6005A48B8 /* Info.plist */,
 				A1992C631A1CA1F6005A48B8 /* LaunchScreen.xib */,
@@ -428,6 +431,7 @@
 				A1EA03961AD685D300AC6C9A /* Locations.swift in Sources */,
 				A1992C5D1A1CA1F6005A48B8 /* ViewController.swift in Sources */,
 				A1992C5B1A1CA1F6005A48B8 /* AppDelegate.swift in Sources */,
+				A14BE8161AD6BD26008ECC2F /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
