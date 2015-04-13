@@ -16,6 +16,7 @@ typealias WatchKitReply = (([NSObject : AnyObject]!) -> Void)
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var bgTask: UIBackgroundTaskIdentifier?
+    var currentLocationCallback: ((location: CLLocationCoordinate2D) -> Void)?
     var locationManager: CLLocationManager?
     var reply: WatchKitReply?
     var window: UIWindow?
@@ -86,6 +87,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
 
         var location = newLocation!.coordinate
+
+        if let currentLocationCallback = currentLocationCallback {
+            currentLocationCallback(location: location)
+        }
 
         if let reply = reply {
             reply(["currentLocation": NSData(bytes: &location, length: sizeof(CLLocationCoordinate2D))])

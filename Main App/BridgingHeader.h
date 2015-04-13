@@ -7,3 +7,4 @@
 //
 
 #import <ContentfulDeliveryAPI/ContentfulDeliveryAPI.h>
+#import <VCTransitionsLibrary/CEPortalAnimationController.h>

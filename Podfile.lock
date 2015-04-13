@@ -24,13 +24,16 @@ PODS:
     - AFNetworking (>= 2.5.2)
     - ISO8601DateFormatter
   - ISO8601DateFormatter (0.7)
+  - VCTransitionsLibrary (1.5.0)
 
 DEPENDENCIES:
   - ContentfulDeliveryAPI
+  - VCTransitionsLibrary
 
 SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
   ContentfulDeliveryAPI: a4d72f88b97e6f7b009875fcf55e11831eb55c5d
   ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
+  VCTransitionsLibrary: d61fd9b7b6721942f0d583bcc0e7f8c31ec9271b
 
 COCOAPODS: 0.36.3
