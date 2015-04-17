@@ -75,9 +75,10 @@ class Location {
     }
 }
 
-struct Locations {
+class Locations {
     let defaultCoordinate = CLLocationCoordinate2D(latitude: 52.52191, longitude: 13.413215)
     let client: CDAClient
+    var usesDefaultCoordinate = false
 
     /* Valid locations:
         37.33170, -122          for SF
@@ -97,6 +98,7 @@ struct Locations {
                 let entries = array.items as! [CDAEntry]
 
                 if entries.count == 0 {
+                    self.usesDefaultCoordinate = true
                     self.fetchEntries(self.defaultCoordinate, handler: handler)
                     return
                 }

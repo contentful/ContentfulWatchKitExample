@@ -45,6 +45,18 @@ class ViewController: CDAMapViewController, MKMapViewDelegate {
         
         delegate.currentLocationCallback = { (location) in
             self.locations.fetchEntries(location) { (locations) in
+                if self.locations.usesDefaultCoordinate {
+                    self.mapView.showsUserLocation = false
+
+                    if (self.presentedViewController != nil) {
+                        return
+                    }
+
+                    let alert = UIAlertController(title: "Unsupported city", message: "Great that you like to use Brew, but locations are currently limited to Berlin, San Francisco and New York. To give you a preview, we are showing you some bars in Berlin.", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+
                 self.places = locations
                 self.refresh()
             }
