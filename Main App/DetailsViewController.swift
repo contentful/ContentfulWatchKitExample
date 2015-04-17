@@ -21,6 +21,21 @@ class DetailsViewController: UIViewController, UIViewControllerTransitioningDele
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func directionsTapped(sender: UIButton) {
+        if let destination = location?.entry.CLLocationCoordinate2DFromFieldWithIdentifier("location") {
+            let currentLocation = MKMapItem.mapItemForCurrentLocation()
+
+            let destinationPlacemark = MKPlacemark(coordinate: destination, addressDictionary: nil)
+            let destination = MKMapItem(placemark: destinationPlacemark)
+
+            if let name = location?.entry.fields["nameOfBar"] as? String {
+                destination.name = name
+            }
+
+            MKMapItem.openMapsWithItems([currentLocation, destination], launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
+        }
+    }
+
     func imageTapped(sender: UITapGestureRecognizer) {
         if sender.view == nil {
             return
