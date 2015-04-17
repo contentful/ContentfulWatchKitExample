@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7BBF7B8973B4CC7CB8C35CB0 /* libPods-WatchKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9EFF9E5138A3E864A83B20 /* libPods-WatchKitExample.a */; };
+		A149AFB61AE15DFE00143863 /* brew-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A149AFB51AE15DFE00143863 /* brew-icon.png */; };
 		A14BE8161AD6BD26008ECC2F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14BE8151AD6BD26008ECC2F /* DetailsViewController.swift */; };
 		A16DED7E1A31D63B007F09E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16DED7D1A31D63B007F09E8 /* MapKit.framework */; };
 		A171BC8C1A24AF4D0078E938 /* ImageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171BC8A1A24AED50078E938 /* ImageInterfaceController.swift */; };
@@ -69,6 +70,7 @@
 		419CD544A8700BC4196F241F /* Pods-WatchKitExample WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchKitExample WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchKitExample WatchKit Extension/Pods-WatchKitExample WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		4E0E4C65D310517A201D49D3 /* Pods-WatchKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchKitExample/Pods-WatchKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		9E9EFF9E5138A3E864A83B20 /* libPods-WatchKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WatchKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A149AFB51AE15DFE00143863 /* brew-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brew-icon.png"; sourceTree = "<group>"; };
 		A14BE8151AD6BD26008ECC2F /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A16DED7D1A31D63B007F09E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A171BC881A24AE2D0078E938 /* MapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInterfaceController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				A1992C5A1A1CA1F6005A48B8 /* AppDelegate.swift */,
+				A149AFB51AE15DFE00143863 /* brew-icon.png */,
 				A1EA03941AD67EC000AC6C9A /* BridgingHeader.h */,
 				A14BE8151AD6BD26008ECC2F /* DetailsViewController.swift */,
 				A1992C611A1CA1F6005A48B8 /* Images.xcassets */,
@@ -336,6 +339,7 @@
 			files = (
 				A1992C601A1CA1F6005A48B8 /* Main.storyboard in Resources */,
 				A1992C651A1CA1F6005A48B8 /* LaunchScreen.xib in Resources */,
+				A149AFB61AE15DFE00143863 /* brew-icon.png in Resources */,
 				A1992C621A1CA1F6005A48B8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
