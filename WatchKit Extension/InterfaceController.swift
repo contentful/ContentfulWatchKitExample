@@ -34,6 +34,14 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
 
             NSLog("Current location: %.5f, %5.f", location.latitude, location.longitude)
 
+            CLGeocoder().reverseGeocodeLocation(CLLocation(latitude: location.latitude, longitude: location.longitude)) { (placemarks, error) -> Void in
+                if let placemarks = placemarks, placemark = placemarks.first as? CLPlacemark {
+                    self.setTitle("🍻 " + placemark.locality)
+                } else {
+                    self.setTitle("🍻 Brew")
+                }
+            }
+
             self.fetchEntries(location)
         }
     }

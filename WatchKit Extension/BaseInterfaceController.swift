@@ -23,6 +23,12 @@ class BaseInterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject!) {
         self.context = context as! Location
+
+        if let name = self.context.entry.fields["nameOfBar"] as? String {
+            setTitle(name)
+        } else {
+            self.setTitle("🍻 Brew")
+        }
     }
 
     @IBAction func homeTapped() {
