@@ -1,3 +1,7 @@
+# Brew
+
+![Some screenshots of the watch app](Screenshots.png)
+
 Example which demonstrates using the [Contentful][1] SDK for bringing content to the ᴡᴀᴛᴄʜ.
 
 [Contentful][1] is a content management platform for web applications, mobile apps and connected devices. It allows you to create, edit & manage content in the cloud and publish it anywhere via powerful API. Contentful offers tools for managing editorial teams and enabling cooperation between organizations.
