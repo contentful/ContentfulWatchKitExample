@@ -81,12 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
     }
 
-    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
-        if newLocation == nil {
-            return
-        }
-
-        var location = newLocation!.coordinate
+    func handleLocationUpdate(newLocation: CLLocation) {
+        var location = newLocation.coordinate
 
         if let currentLocationCallback = currentLocationCallback {
             currentLocationCallback(location: location)
@@ -95,6 +91,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         if let reply = reply {
             reply(["currentLocation": NSData(bytes: &location, length: sizeof(CLLocationCoordinate2D))])
             endBackgroundTaskForWatchKitExtension()
+        }
+    }
+
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        NSLog("Error while determining user location: %@", error)
+
+        self.reply?(nil)
+        endBackgroundTaskForWatchKitExtension()
+    }
+
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        if let newLocation = locations.first as? CLLocation {
+            handleLocationUpdate(newLocation)
+        }
+    }
+
+    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
+        if let newLocation = newLocation {
+            handleLocationUpdate(newLocation)
         }
     }
 }

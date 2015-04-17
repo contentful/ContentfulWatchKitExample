@@ -26,6 +26,8 @@
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>To show bars near your current location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To show bars near your current location.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
