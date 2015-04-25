@@ -1,5 +1,9 @@
 # Brew
 
+The Brew app helps find pubs which have craft beer on the menu, be it in kegs or in bottles. Ales, IPAs, double IPAs, porters, stouts – from 4% to 12%, it's all here. Simply put, Brew is like Foursquare for craft beer places.
+
+Currently available in Berlin, San Francisco and New York. [Download it][3] from the App Store.
+
 ![Some screenshots of the watch app](Screenshots.png)
 
 Example which demonstrates using the [Contentful][1] SDK for bringing content to the ᴡᴀᴛᴄʜ.
@@ -18,8 +22,9 @@ before building it and use the Xcode workspace.
 
 ## License
 
-Copyright (c) 2014 Contentful GmbH. See LICENSE for further details.
+Copyright (c) 2014-2015 Contentful GmbH. See LICENSE for further details.
 
 
 [1]: https://www.contentful.com
 [2]: http://www.cocoapods.org
+[3]: https://itunes.apple.com/app/id986830433
