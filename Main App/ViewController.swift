@@ -66,12 +66,15 @@ class ViewController: CDAMapViewController, MKMapViewDelegate {
     // MARK: MKMapViewDelegate
 
     func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-        if let details = storyboard?.instantiateViewControllerWithIdentifier("DetailsViewController") as? DetailsViewController {
+        if let details = storyboard?.instantiateViewControllerWithIdentifier("DetailsViewController") as? DetailsViewController, view = view {
             let annotation = unsafeBitCast(view.annotation, NSObject.self)
             let identifier = annotation.valueForKey("identifier") as! NSString
-            details.location = places?.filter { $0.entry.identifier == identifier }.first
-            presentViewController(details, animated: true) {
-                self.mapView.deselectAnnotation(view.annotation, animated: false)
+
+            if let location = (places?.filter { $0.entry.identifier == identifier }.first) {
+                details.location = location
+                presentViewController(details, animated: true) {
+                    self.mapView.deselectAnnotation(view.annotation, animated: false)
+                }
             }
         }
     }
