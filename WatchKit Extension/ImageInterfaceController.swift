@@ -15,16 +15,16 @@ class ImageInterfaceController:BaseInterfaceController {
     @IBOutlet weak var secondImage: WKInterfaceImage!
 
     func loadingAnimationImage() -> UIImage? {
-        let sheet = UIImage(named: "activity-medium")
+        let sheet = UIImage(named: "activity-large")
         var images = [UIImage]()
 
         if sheet == nil {
             return nil
         }
 
-        for (var currentX = 0; currentX < Int(sheet!.size.width); currentX += 30) {
-            let splitRef = CGImageCreateWithImageInRect(sheet?.CGImage, CGRect(x: CGFloat(currentX), y: 0.0, width: 30.0, height: sheet!.size.height * 2))
-            images.append(UIImage(CGImage: splitRef)!)
+        for (var currentX = 0; currentX < Int(sheet!.size.width); currentX += 54) {
+            let splitRef = CGImageCreateWithImageInRect(sheet?.CGImage, CGRect(x: CGFloat(currentX), y: 0.0, width: 54.0, height: sheet!.size.height * 2))
+            images.append(UIImage(CGImage: splitRef, scale: 2.0, orientation: .Up)!)
         }
 
         let animatedImage = UIImage.animatedImageWithImages(images, duration: 0.1)
