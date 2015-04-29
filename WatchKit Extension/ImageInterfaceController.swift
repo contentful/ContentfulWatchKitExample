@@ -10,6 +10,7 @@ import WatchKit
 
 class ImageInterfaceController:BaseInterfaceController {
     private let LoadingImageIdentifier = "LoadingImageIdentifier"
+    private let scale = WKInterfaceDevice.currentDevice().screenScale
 
     @IBOutlet weak var firstImage: WKInterfaceImage!
     @IBOutlet weak var secondImage: WKInterfaceImage!
@@ -24,10 +25,10 @@ class ImageInterfaceController:BaseInterfaceController {
 
         for (var currentX = 0; currentX < Int(sheet!.size.width); currentX += 54) {
             let splitRef = CGImageCreateWithImageInRect(sheet?.CGImage, CGRect(x: CGFloat(currentX), y: 0.0, width: 54.0, height: sheet!.size.height * 2))
-            images.append(UIImage(CGImage: splitRef, scale: 2.0, orientation: .Up)!)
+            images.append(UIImage(CGImage: splitRef, scale: scale, orientation: .Up)!)
         }
 
-        let animatedImage = UIImage.animatedImageWithImages(images, duration: 0.1)
+        let animatedImage = UIImage.animatedImageWithImages(images, duration: 0.5)
         WKInterfaceDevice.currentDevice().addCachedImage(animatedImage, name: LoadingImageIdentifier)
         return animatedImage
     }
@@ -87,7 +88,7 @@ class ImageInterfaceController:BaseInterfaceController {
             return
         }
 
-        let request = NSURLRequest(URL: asset.imageURLWithSize(CGSize(width: 200, height: 200)))
+        let request = NSURLRequest(URL: asset.imageURLWithSize(CGSize(width: 300, height: 200)))
 
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
             (response, data, error) -> Void in
@@ -95,7 +96,7 @@ class ImageInterfaceController:BaseInterfaceController {
                 return
             }
 
-            completionHandler(UIImage(data: data))
+            completionHandler(UIImage(data: data, scale: self.scale))
         }
     }
 }
